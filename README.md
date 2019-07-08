@@ -1,4 +1,4 @@
-# pinkman_app
+# Flutter test app
 
 A new Flutter project.
 
