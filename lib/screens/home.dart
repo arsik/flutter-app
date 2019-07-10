@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
   }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,16 +32,16 @@ class _HomeScreenState extends State<HomeScreen> {
        currentIndex: 0, // this will be set when a new tab is tapped
        items: [
          BottomNavigationBarItem(
-           icon: new Icon(Icons.home),
-           title: new Text('Home')
+           icon: new Icon(Icons.people),
+           title: new Text('Users')
          ),
          BottomNavigationBarItem(
-           icon: new Icon(Icons.mail),
-           title: new Text('Messages')
+           icon: new Icon(Icons.show_chart),
+           title: new Text('Rating')
          ),
          BottomNavigationBarItem(
-           icon: Icon(Icons.person),
-           title: Text('Profile')
+           icon: Icon(Icons.settings),
+           title: Text('Settings')
          )
        ],
      )
