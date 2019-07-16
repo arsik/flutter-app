@@ -21,12 +21,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Loading...")
+            Image.asset('images/splash.png', width: 800, fit: BoxFit.cover),
+            Container(child: Text('You know what to do with your team'), margin: EdgeInsets.only(top: 40.0))
           ],
         ),
       ),

@@ -9,9 +9,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  int _currentIndex = 0;
+  final List<Widget> _children = [];
+
   @override
   void initState() {
     super.initState();
+  }
+
+  void onTabTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
   }
   
   @override
@@ -24,12 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Home")
+            Text(_currentIndex.toString())
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-       currentIndex: 0, // this will be set when a new tab is tapped
+       onTap: onTabTapped,
+       currentIndex: _currentIndex,
        items: [
          BottomNavigationBarItem(
            icon: new Icon(Icons.people),
