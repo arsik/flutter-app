@@ -22,6 +22,11 @@ class MyApp extends StatelessWidget {
       title: 'App',
       home: SplashScreen(nextRoute: '/Login'),
       routes: routes,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        // primaryColor: Colors.lightBlue[800],
+        accentColor: Color.fromRGBO(237, 28, 128, 1)
+      ),
     );
   }
 }
