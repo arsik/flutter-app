@@ -3,7 +3,6 @@ import 'dart:async';
 import 'dart:convert' show json;
 import "package:http/http.dart" as http;
 import 'package:flutter/material.dart';
-import 'package:pinkman_app/components/top_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   final String nextRoute;
@@ -62,95 +61,48 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('App'),
-      // ),
-      body: Stack(
-        children: <Widget>[
-          ListView.builder(
-            itemCount: _users.length,
-            itemBuilder: (BuildContext ctx, int index) {
-              return InkWell(
-                splashColor: Colors.pink.withAlpha(30),
-                onTap: () {
-                  print('Card tapped.');
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    // padding: new EdgeInsets.all(16.0),
-                    children: <Widget>[
-                      // Image.network(, width: 40, height: 40),
-                      Container(
-                        width: 40.0,
-                        height: 40.0,
-                        decoration: new BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: new DecorationImage(
-                              fit: BoxFit.fill,
-                              image: new NetworkImage(_users[index]['avatar_url'])
-                          )
-                        )
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 10.0),
-                        child: Text(_users[index]['display_name'])
-                      )
-                    ]
-                  )
-                ),
-              );
-            },
-          ),
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: TopBar()
-          )
-        ]
+      appBar: AppBar(
+        title: Text('App'),
       ),
-      // body: Center(
-      //   child: ListView.builder(
-      //     itemCount: _users.length,
-      //     itemBuilder: (BuildContext ctx, int index) {
-      //       return InkWell(
-      //         splashColor: Colors.pink.withAlpha(30),
-      //         onTap: () {
-      //           print('Card tapped.');
-      //         },
-      //         child: Container(
-      //           padding: EdgeInsets.all(10.0),
-      //           child: Row(
-      //             mainAxisAlignment: MainAxisAlignment.start,
-      //             crossAxisAlignment: CrossAxisAlignment.center,
-      //             // padding: new EdgeInsets.all(16.0),
-      //             children: <Widget>[
-      //               // Image.network(, width: 40, height: 40),
-      //               Container(
-      //                 width: 40.0,
-      //                 height: 40.0,
-      //                 decoration: new BoxDecoration(
-      //                   shape: BoxShape.circle,
-      //                   image: new DecorationImage(
-      //                       fit: BoxFit.fill,
-      //                       image: new NetworkImage(_users[index]['avatar_url'])
-      //                   )
-      //                 )
-      //               ),
-      //               Container(
-      //                 margin: EdgeInsets.only(left: 10.0),
-      //                 child: Text(_users[index]['display_name'])
-      //               )
-      //             ]
-      //           )
-      //         ),
-      //       );
-      //     },
-      //   )
-      // ),
+      body: Center(
+        child: ListView.builder(
+          itemCount: _users.length,
+          itemBuilder: (BuildContext ctx, int index) {
+            return InkWell(
+              splashColor: Colors.pink.withAlpha(30),
+              onTap: () {
+                print('Card tapped.');
+              },
+              child: Container(
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  // padding: new EdgeInsets.all(16.0),
+                  children: <Widget>[
+                    // Image.network(, width: 40, height: 40),
+                    Container(
+                      width: 40.0,
+                      height: 40.0,
+                      decoration: new BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: new DecorationImage(
+                            fit: BoxFit.fill,
+                            image: new NetworkImage(_users[index]['avatar_url'])
+                        )
+                      )
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 10.0),
+                      child: Text(_users[index]['display_name'])
+                    )
+                  ]
+                )
+              ),
+            );
+          },
+        )
+      ),
       bottomNavigationBar: BottomNavigationBar(
        onTap: onTabTapped,
        currentIndex: _currentIndex,
