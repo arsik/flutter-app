@@ -6,16 +6,10 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   final String nextRoute;
-  HomeScreen({this.nextRoute});
+  HomeScreen({ this.nextRoute });
   @override
   State<StatefulWidget> createState() => _HomeScreenState();
 }
-
-// class User {
-//   constructor() {
-    
-//   } 
-// }
 
 class _HomeScreenState extends State<HomeScreen> {
 
