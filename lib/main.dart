@@ -1,7 +1,5 @@
-// Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
 import 'package:flutter/material.dart';
+import 'package:pinkman_app/screens/profile.dart';
 import 'package:pinkman_app/screens/splash.dart';
 import 'package:pinkman_app/screens/home.dart';
 import 'package:pinkman_app/screens/login.dart';
@@ -14,6 +12,7 @@ class MyApp extends StatelessWidget {
     // Путь, по которому создаётся Home Screen
     '/Home': (BuildContext context) => HomeScreen(),
     '/Login': (BuildContext context) => LoginScreen(),
+    '/Profile': (BuildContext context) => ProfileScreen(),
   };
 
   @override

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
   final String nextRoute;
-  SplashScreen({this.nextRoute});
+  SplashScreen({ this.nextRoute });
   @override
   State<StatefulWidget> createState() => _SplashScreenState();
 }

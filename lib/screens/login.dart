@@ -4,7 +4,7 @@ import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 
 class LoginScreen extends StatefulWidget {
   final String nextRoute;
-  LoginScreen({this.nextRoute});
+  LoginScreen({ this.nextRoute });
   @override
   State<StatefulWidget> createState() => _LoginScreenState();
 }
