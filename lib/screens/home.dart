@@ -4,6 +4,7 @@ import 'dart:convert' show json;
 import "package:http/http.dart" as http;
 import 'package:flutter/material.dart';
 import 'package:pinkman_app/components/top_bar.dart';
+import 'package:pinkman_app/config/constants.dart';
 import 'package:pinkman_app/screens/profile.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -35,8 +36,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _requestUsers() async {
 
-    final http.Response response = await http.get('https://passport.pink-code.ru/api/users', headers: {
-      'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2ZlMmNmZGFmNmJmMDZmOTM1YjZhYmIiLCJhY19pZCI6NzMsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU2MzI3MjU3M30.LYleohaGiz-0yPO6vo74w4JyHQf8RqsAX-hs50eYOaQ'
+    final http.Response response = await http.get('${baseURL}users', headers: {
+      'auth-token': authToken
     });
 
     // (response.statusCode != 200)

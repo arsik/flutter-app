@@ -1,0 +1,2 @@
+const baseURL = 'https://passport.pink-code.ru/api/';
+const authToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2ZlMmNmZGFmNmJmMDZmOTM1YjZhYmIiLCJhY19pZCI6NzMsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU2MzI3MjU3M30.LYleohaGiz-0yPO6vo74w4JyHQf8RqsAX-hs50eYOaQ';
